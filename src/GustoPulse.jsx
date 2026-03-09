@@ -9,7 +9,7 @@ const TABS = [
 const C = {
   bg: "#0B0F0E", card: "#141A18", border: "#243029",
   green: "#00B37D", greenMuted: "#00B37D33", greenDim: "#1A4D3A",
-  coral: "#F2766B", coralMuted: "#F2766B22",
+  gusto: "#F4694C", gustoMuted: "#F4694C22", gustoDim: "#4D2218",
   amber: "#E8A849", amberMuted: "#E8A84922",
   text: "#E8ECE9", textMuted: "#C0CBC5", textDim: "#8A9B92",
 };
@@ -127,7 +127,7 @@ function Flywheel() {
           <div style={{ fontFamily:F.mono, fontSize:"8px", color:C.text, textTransform:"uppercase", letterSpacing:"0.04em", maxWidth:"100px", lineHeight:1.4, whiteSpace:"pre-line" }}>{n.label}</div>
         </div>
       ))}
-      {[{t:"Feeds →",x:74,y:20},{t:"Enables →",x:80,y:70},{t:"Drives →",x:24,y:72},{t:"Generates →",x:16,y:20}].map((a2,i) => (
+      {[{t:"Feeds →",x:74,y:20},{t:"← Enables",x:80,y:70},{t:"← Drives",x:24,y:72},{t:"Generates →",x:16,y:20}].map((a2,i) => (
         <div key={i} style={{ position:"absolute", left:`${a2.x}%`, top:`${a2.y}%`, transform:"translate(-50%,-50%)", fontFamily:F.mono, fontSize:"8px", color:C.textDim, textTransform:"uppercase", opacity:a?1:0, transition:`opacity 0.6s ease ${0.8+i*0.1}s` }}>{a2.t}</div>
       ))}
     </div>
@@ -147,9 +147,9 @@ function ThesisTab() {
       </p>
 
       {/* Gusto Money acknowledgment */}
-      <Card hl={C.green} style={{ borderLeft:`3px solid ${C.green}`, marginBottom:"28px" }}>
+      <Card hl={C.gusto} style={{ borderLeft:`3px solid ${C.gusto}`, marginBottom:"28px" }}>
         <div style={{ fontFamily:F.body, fontSize:"14px", color:C.text, lineHeight:1.7 }}>
-          <strong style={{ color:C.green }}>Gusto already knows this.</strong> They launched Gusto Money in 2025 — Payroll Bridge (credit via Parafin), Bill Pay, Invoicing, Instant Pay. ARR grew 140%+ YoY. Their GM called Payroll Bridge "the first expression of a much broader vision." But today, every Gusto Money product is <strong>reactive</strong> — it helps when you're already in trouble. The strategic question is whether <strong>proactive intelligence</strong> changes behavior. That's what this artifact tests.
+          <strong style={{ color:C.gusto }}>Gusto already knows this.</strong> They launched Gusto Money in 2025 — Payroll Bridge (credit via Parafin), Bill Pay, Invoicing, Instant Pay. ARR grew 140%+ YoY. Their GM called Payroll Bridge "the first expression of a much broader vision." But today, every Gusto Money product is <strong>reactive</strong> — it helps when you're already in trouble. The strategic question is whether <strong>proactive intelligence</strong> changes behavior. That's what this artifact tests.
         </div>
       </Card>
 
@@ -171,8 +171,8 @@ function ThesisTab() {
         <div style={{ fontFamily:F.body, fontSize:"13px", color:C.textMuted, lineHeight:1.7, marginTop:"12px", padding:"14px", backgroundColor:C.greenMuted, borderRadius:"6px" }}>
           <strong style={{ color:C.green }}>The reinforcing loop:</strong> Each payroll cycle generates dense, per-employee data (hours, compensation, deductions, taxes, benefits). ~26 biweekly cycles/year across 400K businesses. Better data → better predictions → more trust → more financial product adoption → deeper switching costs → more retention → more data. Through the B=MAT lens: Motivation to switch drops (you'd lose your financial memory), Ability drops (can't rebuild history elsewhere), and there's no Trigger (if Pulse is proactive, there's no frustration moment to prompt a search). A competitor starting today would need years of payroll history to match.
         </div>
-        <div style={{ fontFamily:F.body, fontSize:"13px", color:C.textMuted, lineHeight:1.7, marginTop:"12px", padding:"14px", backgroundColor:C.coralMuted, borderRadius:"6px" }}>
-          <strong style={{ color:C.coral }}>The balancing loops:</strong> No reinforcing loop runs forever. Three forces cap this flywheel: <strong style={{ color:C.text }}>(a) SMB mortality</strong> — small businesses die at a high rate, so Gusto constantly loses the businesses whose data is most mature. <strong style={{ color:C.text }}>(b) Trust ceiling</strong> — there's a psychological threshold beyond which owners won't let their payroll processor make financial recommendations. A payroll company suggesting a credit line feels different from a bank doing it. <strong style={{ color:C.text }}>(c) Regulatory drag</strong> — as Gusto moves from showing intelligence to acting on it, compliance costs increase non-linearly. These don't kill the thesis — but they define its ceiling.
+        <div style={{ fontFamily:F.body, fontSize:"13px", color:C.textMuted, lineHeight:1.7, marginTop:"12px", padding:"14px", backgroundColor:C.amberMuted, borderRadius:"6px" }}>
+          <strong style={{ color:C.amber }}>The balancing loops:</strong> No reinforcing loop runs forever. Three forces cap this flywheel: <strong style={{ color:C.text }}>(a) SMB mortality</strong> — small businesses die at a high rate, so Gusto constantly loses the businesses whose data is most mature. <strong style={{ color:C.text }}>(b) Trust ceiling</strong> — there's a psychological threshold beyond which owners won't let their payroll processor make financial recommendations. A payroll company suggesting a credit line feels different from a bank doing it. <strong style={{ color:C.text }}>(c) Regulatory drag</strong> — as Gusto moves from showing intelligence to acting on it, compliance costs increase non-linearly. These don't kill the thesis — but they define its ceiling.
         </div>
       </Card>
     </div>
@@ -232,8 +232,8 @@ function TestTab() {
                   </div>
                 ))}
               </div>
-              <div style={{ marginTop:"14px", padding:"10px 14px", backgroundColor:C.coralMuted, borderRadius:"6px", border:`1px solid ${C.coral}33`, fontFamily:F.body, fontSize:"12px", color:C.textMuted, lineHeight:1.6 }}>
-                <strong style={{ color:C.coral }}>Kill criteria:</strong> If &lt;40% of the target segment says "very disappointed," the thesis is wrong. Stay reactive. Don't build Pulse.
+              <div style={{ marginTop:"14px", padding:"10px 14px", backgroundColor:C.amberMuted, borderRadius:"6px", border:`1px solid ${C.amber}33`, fontFamily:F.body, fontSize:"12px", color:C.textMuted, lineHeight:1.6 }}>
+                <strong style={{ color:C.amber }}>Kill criteria:</strong> If &lt;40% of the target segment says "very disappointed," the thesis is wrong. Stay reactive. Don't build Pulse.
               </div>
             </div>
           </div>
@@ -268,7 +268,7 @@ function TestTab() {
 
 // ── TAB 3: RISKS + WHY SID ──
 function RisksTab() {
-  const dc = (v) => v === "strong" ? C.green : v === "medium" ? C.amber : v === "weak" ? C.coral : C.textDim;
+  const dc = (v) => v === "strong" ? C.green : v === "medium" ? C.amber : v === "weak" ? C.textMuted : C.textDim;
   const Dot = ({ v }) => <div style={{ width:"10px", height:"10px", borderRadius:"50%", backgroundColor:dc(v), margin:"0 auto" }}/>;
   const CR = ({ name, payroll, hr, finance, data, moat }) => (
     <tr>
@@ -281,7 +281,7 @@ function RisksTab() {
   return (
     <div>
       <h2 style={{ fontFamily:F.display, fontSize:"32px", color:C.text, lineHeight:1.25, margin:"0 0 24px", maxWidth:"640px" }}>
-        Every thesis has <span style={{ color:C.coral }}>load-bearing assumptions.</span>
+        Every thesis has <span style={{ color:C.amber }}>load-bearing assumptions.</span>
       </h2>
 
       {/* Competitive table */}
@@ -302,7 +302,7 @@ function RisksTab() {
           </tbody>
         </table>
         <div style={{ display:"flex", gap:"14px", marginTop:"10px", fontFamily:F.mono, fontSize:"10px", color:C.textDim }}>
-          {[["Strong",C.green],["Medium",C.amber],["Weak",C.coral],["N/A",C.textDim]].map(([l,c],i) => (
+          {[["Strong",C.green],["Medium",C.amber],["Weak",C.textMuted],["N/A",C.textDim]].map(([l,c],i) => (
             <span key={i}><span style={{ display:"inline-block", width:"8px", height:"8px", borderRadius:"50%", backgroundColor:c, marginRight:"4px" }}/>{l}</span>
           ))}
         </div>
@@ -312,9 +312,9 @@ function RisksTab() {
       <SL>Where This Thesis Could Be Wrong</SL>
       <div style={{ display:"flex", flexDirection:"column", gap:"12px", marginBottom:"32px" }}>
         {[
-          { title:"SMB owners may not want this from their payroll provider", detail:"The core risk. Gusto's median customer wants payroll to work, not a financial dashboard. The Phase 2 survey tests this directly. If <40% of the target segment wants it, stop.", sev:"The bet", col:C.coral },
-          { title:"Rippling wins on HR breadth and modularity", detail:"If the competitive axis stays on HR features, Rippling wins regardless. This thesis only works if the axis shifts to financial intelligence.", sev:"Real threat", col:C.coral },
-          { title:"Reporting is Gusto's weakest surface", detail:"Consistently flagged in reviews: limited customization, basic dashboards. Building predictions on top of a weak reporting UX is risky.", sev:"Must address", col:C.coral },
+          { title:"SMB owners may not want this from their payroll provider", detail:"The core risk. Gusto's median customer wants payroll to work, not a financial dashboard. The Phase 2 survey tests this directly. If <40% of the target segment wants it, stop.", sev:"The bet", col:C.amber },
+          { title:"Rippling wins on HR breadth and modularity", detail:"If the competitive axis stays on HR features, Rippling wins regardless. This thesis only works if the axis shifts to financial intelligence.", sev:"Real threat", col:C.amber },
+          { title:"Reporting is Gusto's weakest surface", detail:"Consistently flagged in reviews: limited customization, basic dashboards. Building predictions on top of a weak reporting UX is risky.", sev:"Must address", col:C.amber },
           { title:"QuickBooks owns the accounting relationship", detail:"Intuit has financial data from bookkeeping + tax prep. But their data is self-reported and observed — Gusto's is generated by moving real money. Still, 'good enough' data with an incumbent relationship can beat 'perfect data' that requires a platform switch.", sev:"Adjacent threat", col:C.amber },
           { title:"Misaligned incentives if Pulse drives lending", detail:"If Pulse surfaces worrying forecasts that drive Payroll Bridge adoption, Gusto is incentivized to predict problems. The intelligence layer must be calibrated for accuracy, not conversion.", sev:"Incentive risk", col:C.amber },
         ].map((r, i) => (
@@ -370,14 +370,14 @@ function RisksTab() {
 
       <div style={{ display:"flex", gap:"12px" }}>
         <Card style={{ flex:1 }}>
-          <div style={{ fontFamily:F.mono, fontSize:"11px", color:C.green, textTransform:"uppercase", letterSpacing:"0.06em", marginBottom:"8px" }}>Links</div>
+          <div style={{ fontFamily:F.mono, fontSize:"11px", color:C.gusto, textTransform:"uppercase", letterSpacing:"0.06em", marginBottom:"8px" }}>Links</div>
           <div style={{ fontFamily:F.body, fontSize:"13px", color:C.textMuted, lineHeight:2 }}>
-            <div>Portfolio → <a href="https://sidharthsundaram.com" target="_blank" rel="noopener noreferrer" style={{ color:C.green, textDecoration:"none", borderBottom:`1px solid ${C.greenDim}` }}>sidharthsundaram.com</a></div>
-            <div>LinkedIn → <a href="https://linkedin.com/in/sidharthsundaram" target="_blank" rel="noopener noreferrer" style={{ color:C.green, textDecoration:"none", borderBottom:`1px solid ${C.greenDim}` }}>linkedin.com/in/sidharthsundaram</a></div>
+            <div>Portfolio → <a href="https://sidharthsundaram.com" target="_blank" rel="noopener noreferrer" style={{ color:C.gusto, textDecoration:"none", borderBottom:`1px solid ${C.gustoDim}` }}>sidharthsundaram.com</a></div>
+            <div>LinkedIn → <a href="https://linkedin.com/in/sidharthsundaram" target="_blank" rel="noopener noreferrer" style={{ color:C.gusto, textDecoration:"none", borderBottom:`1px solid ${C.gustoDim}` }}>linkedin.com/in/sidharthsundaram</a></div>
           </div>
         </Card>
         <Card style={{ flex:1 }}>
-          <div style={{ fontFamily:F.mono, fontSize:"11px", color:C.green, textTransform:"uppercase", letterSpacing:"0.06em", marginBottom:"8px" }}>This Artifact</div>
+          <div style={{ fontFamily:F.mono, fontSize:"11px", color:C.gusto, textTransform:"uppercase", letterSpacing:"0.06em", marginBottom:"8px" }}>This Artifact</div>
           <div style={{ fontFamily:F.body, fontSize:"13px", color:C.textMuted, lineHeight:1.7 }}>Built in React. Every claim grounded in public data. The competitive table includes dimensions where Gusto loses. That's intentional.</div>
         </Card>
       </div>
@@ -395,9 +395,9 @@ export default function GustoPulse() {
       <div style={{ padding:"32px 40px 0", maxWidth:"880px", margin:"0 auto" }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:"8px" }}>
           <div>
-            <div style={{ fontFamily:F.mono, fontSize:"11px", color:C.textDim, textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:"6px" }}>Work Sample for Gusto · PM Internship Summer 2026</div>
+            <div style={{ fontFamily:F.mono, fontSize:"11px", color:C.gusto, textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:"6px" }}>Work Sample for Gusto · PM Internship Summer 2026</div>
             <h1 style={{ fontFamily:F.display, fontSize:"40px", fontWeight:400, color:C.text, lineHeight:1.15, margin:0 }}>
-              The Flywheel Gusto<br/><span style={{ color:C.green }}>Already Owns</span>
+              The Flywheel Gusto<br/><span style={{ color:C.gusto }}>Already Owns</span>
             </h1>
           </div>
           <div style={{ fontFamily:F.mono, fontSize:"11px", color:C.textDim, textAlign:"right", lineHeight:1.8 }}>
@@ -413,8 +413,8 @@ export default function GustoPulse() {
             <button key={t.id} onClick={() => setTab(t.id)} style={{
               fontFamily:F.mono, fontSize:"11px", textTransform:"uppercase", letterSpacing:"0.08em",
               padding:"10px 20px", backgroundColor:tab===t.id?C.card:"transparent",
-              color:tab===t.id?C.green:C.textDim, border:"none",
-              borderBottom:tab===t.id?`2px solid ${C.green}`:"2px solid transparent",
+              color:tab===t.id?C.gusto:C.textDim, border:"none",
+              borderBottom:tab===t.id?`2px solid ${C.gusto}`:"2px solid transparent",
               cursor:"pointer", transition:"all 0.2s",
             }}>{t.label}</button>
           ))}
