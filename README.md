@@ -16,22 +16,3 @@ Three tabs:
 ## What this isn't
 
 A consulting deck. A feature spec handed down from outside. This is one candidate's attempt to demonstrate strategic judgment, PM craft, and intellectual honesty about a product they don't work on — built in a few days with public information.
-
-## Run locally
-
-```bash
-npm install
-npm run dev
-```
-
-## Deploy
-
-Push to GitHub → connect to [Vercel](https://vercel.com) → auto-deploys on push. No env vars needed.
-
-## Stack
-
-Vite + React 18. No external UI libraries. Inline styles. Fonts loaded via Google Fonts (Instrument Serif, JetBrains Mono, DM Sans).
-
-## Contact
-
-[sidharthsundaram.com](https://sidharthsundaram.com) · [LinkedIn](https://linkedin.com/in/sidharthsundaram) · sundar84@purdue.edu
